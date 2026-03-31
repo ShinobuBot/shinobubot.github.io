@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+
+  <!-- Home / Ana Sayfa / Startseite / Accueil / Inicio -->
+  <url>
+    <loc>https://shinobubot.xyz/</loc>
+    <lastmod>2026-03-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="en"       href="https://shinobubot.xyz/" />
+    <xhtml:link rel="alternate" hreflang="tr"       href="https://shinobubot.xyz/" />
+    <xhtml:link rel="alternate" hreflang="de"       href="https://shinobubot.xyz/" />
+    <xhtml:link rel="alternate" hreflang="fr"       href="https://shinobubot.xyz/" />
+    <xhtml:link rel="alternate" hreflang="es"       href="https://shinobubot.xyz/" />
+    <xhtml:link rel="alternate" hreflang="ru"       href="https://shinobubot.xyz/" />
+    <xhtml:link rel="alternate" hreflang="ar"       href="https://shinobubot.xyz/" />
+    <xhtml:link rel="alternate" hreflang="ja"       href="https://shinobubot.xyz/" />
+    <xhtml:link rel="alternate" hreflang="ko"       href="https://shinobubot.xyz/" />
+    <xhtml:link rel="alternate" hreflang="pt"       href="https://shinobubot.xyz/" />
+    <xhtml:link rel="alternate" hreflang="bs"       href="https://shinobubot.xyz/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://shinobubot.xyz/" />
+    <image:image>
+      <image:loc>https://shinobubot.xyz/opengraph.jpg</image:loc>
+      <image:title>Shinobu Discord Music Bot</image:title>
+      <image:caption>Best free Discord music bot — YouTube, Spotify, SoundCloud support</image:caption>
+    </image:image>
+  </url>
+
+  <!-- Premium -->
+  <url>
+    <loc>https://shinobubot.xyz/premium</loc>
+    <lastmod>2026-03-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en"       href="https://shinobubot.xyz/premium" />
+    <xhtml:link rel="alternate" hreflang="tr"       href="https://shinobubot.xyz/premium" />
+    <xhtml:link rel="alternate" hreflang="de"       href="https://shinobubot.xyz/premium" />
+    <xhtml:link rel="alternate" hreflang="fr"       href="https://shinobubot.xyz/premium" />
+    <xhtml:link rel="alternate" hreflang="es"       href="https://shinobubot.xyz/premium" />
+    <xhtml:link rel="alternate" hreflang="ru"       href="https://shinobubot.xyz/premium" />
+    <xhtml:link rel="alternate" hreflang="ar"       href="https://shinobubot.xyz/premium" />
+    <xhtml:link rel="alternate" hreflang="ja"       href="https://shinobubot.xyz/premium" />
+    <xhtml:link rel="alternate" hreflang="ko"       href="https://shinobubot.xyz/premium" />
+    <xhtml:link rel="alternate" hreflang="pt"       href="https://shinobubot.xyz/premium" />
+    <xhtml:link rel="alternate" hreflang="bs"       href="https://shinobubot.xyz/premium" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://shinobubot.xyz/premium" />
+  </url>
+
+  <!-- Record Label Commands -->
+  <url>
+    <loc>https://shinobubot.xyz/commands/record-label</loc>
+    <lastmod>2026-03-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en"       href="https://shinobubot.xyz/commands/record-label" />
+    <xhtml:link rel="alternate" hreflang="tr"       href="https://shinobubot.xyz/commands/record-label" />
+    <xhtml:link rel="alternate" hreflang="de"       href="https://shinobubot.xyz/commands/record-label" />
+    <xhtml:link rel="alternate" hreflang="fr"       href="https://shinobubot.xyz/commands/record-label" />
+    <xhtml:link rel="alternate" hreflang="es"       href="https://shinobubot.xyz/commands/record-label" />
+    <xhtml:link rel="alternate" hreflang="ru"       href="https://shinobubot.xyz/commands/record-label" />
+    <xhtml:link rel="alternate" hreflang="ar"       href="https://shinobubot.xyz/commands/record-label" />
+    <xhtml:link rel="alternate" hreflang="ja"       href="https://shinobubot.xyz/commands/record-label" />
+    <xhtml:link rel="alternate" hreflang="ko"       href="https://shinobubot.xyz/commands/record-label" />
+    <xhtml:link rel="alternate" hreflang="pt"       href="https://shinobubot.xyz/commands/record-label" />
+    <xhtml:link rel="alternate" hreflang="bs"       href="https://shinobubot.xyz/commands/record-label" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://shinobubot.xyz/commands/record-label" />
+  </url>
+
+  <!-- Terms of Service -->
+  <url>
+    <loc>https://shinobubot.xyz/terms</loc>
+    <lastmod>2026-03-28</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.4</priority>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://shinobubot.xyz/terms" />
+  </url>
+
+  <!-- Privacy Policy -->
+  <url>
+    <loc>https://shinobubot.xyz/privacy</loc>
+    <lastmod>2026-03-28</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.4</priority>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://shinobubot.xyz/privacy" />
+  </url>
+
+  <!-- Refund Policy -->
+  <url>
+    <loc>https://shinobubot.xyz/refund</loc>
+    <lastmod>2026-03-28</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.4</priority>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://shinobubot.xyz/refund" />
+  </url>
+
+</urlset>

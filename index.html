@@ -1,35 +1,572 @@
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5" />
 
-  <title>Shinobu Bot</title>
-  <meta property="og:title" content="Shinobu Bot" />
-  <meta property="og:locale" content="tr_TR" />
-  <meta name="description" content="Shinobu'nun websitesi" />
-  <meta property="og:description" content="Shinobu'nun websitesi" />
-  <link rel="canonical" href="http://5.161.182.209:1040/" />
-  <meta property="og:url" content="https://Shinobubot.github.io/" />
-  <meta property="og:site_name" content="ShinobuBot.github.io" />
-  <meta property="og:type" content="website" />
-  <meta name="twitter:card" content="summary" />
-  <meta property="twitter:title" content="Shinobu Bot" />
-  <script type="application/ld+json">
+    <!-- ═══════════════════════════════════════
+         PRIMARY SEO
+    ═══════════════════════════════════════ -->
+    <title>Shinobu — Best Discord Music Bot | YouTube, Spotify, SoundCloud</title>
+    <meta name="description" content="Shinobu is the best free Discord music bot. Supports YouTube, Spotify, SoundCloud and Apple Music. 8D audio, Bass Boost, Nightcore filters, personal playlist management and a unique economy system. Add for free!" />
+    <meta name="keywords" content="
+      discord music bot, best discord music bot, free discord music bot, shinobu bot, youtube discord bot, spotify discord bot, soundcloud discord bot, bass boost discord, 8d audio discord, nightcore bot, discord playlist bot, free discord bot, add music bot discord, discord karaoke bot, music filter discord, discord server bot, 24/7 music discord, discord economy bot, record label discord, discord audio bot, discord bot music commands, shinobu discord, music bot for discord, discord music player, discord bot music, best free music bot discord, discord queue bot, apple music discord, discord high quality audio,
+      discord müzik botu, en iyi discord müzik botu, ücretsiz discord müzik botu, shinobu botu, youtube discord botu, spotify discord botu, soundcloud discord botu, bass boost discord, 8d ses discord, nightcore botu, discord playlist botu, ücretsiz discord botu, discord müzik botu ekle, discord karaoke botu, müzik filtresi discord, discord sunucu botu, 7/24 müzik discord, discord ekonomi botu, plak şirketi discord, discord müzik çalar,
+      discord musik bot, bester discord musik bot, kostenloser discord musik bot, youtube discord bot deutsch, spotify discord bot deutsch, bass boost discord deutsch, 8d audio discord deutsch, discord playlist bot deutsch, discord karaoke bot,
+      bot musique discord, meilleur bot musique discord, bot musique discord gratuit, youtube discord bot français, spotify discord bot, bass boost discord, 8d audio discord, bot playlist discord,
+      bot de música discord, mejor bot de música discord, bot de música discord gratis, youtube discord bot español, spotify discord bot, bass boost discord, 8d audio discord, bot playlist discord,
+      discord музыкальный бот, лучший discord музыкальный бот, бесплатный discord музыкальный бот, ютуб discord бот, спотифай discord бот,
+      ديسكورد بوت موسيقى, أفضل بوت موسيقى ديسكورد, بوت موسيقى مجاني ديسكورد, يوتيوب بوت ديسكورد, سبوتيفاي بوت ديسكورد,
+      ディスコード 音楽 ボット, 最高のディスコード音楽ボット, 無料ディスコード音楽ボット, ユーチューブ ディスコード ボット,
+      디스코드 음악 봇, 최고의 디스코드 음악 봇, 무료 디스코드 음악 봇, 유튜브 디스코드 봇, 스포티파이 디스코드 봇,
+      bot de música discord português, melhor bot de música discord, bot de música discord grátis, youtube discord bot, spotify discord bot
+    " />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+    <meta name="author" content="Shinobu Bot" />
+    <meta name="copyright" content="Shinobu Bot" />
+    <meta name="language" content="en, tr, de, fr, es, ru, ar, ja, ko, pt, bs" />
+    <meta name="revisit-after" content="7 days" />
+    <meta name="rating" content="general" />
+    <meta name="category" content="Music, Discord Bot, Entertainment" />
+    <meta name="classification" content="Music Software, Discord Bot" />
+    <meta name="coverage" content="Worldwide" />
+    <meta name="distribution" content="Global" />
+    <meta name="target" content="all" />
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="MobileOptimized" content="320" />
+    <meta name="geo.region" content="US, TR, DE, FR, ES, RU, SA, JP, KR, BR, BA" />
+
+    <!-- ═══════════════════════════════════════
+         CANONICAL & HREFLANG (all 11 supported languages)
+    ═══════════════════════════════════════ -->
+    <link rel="canonical" href="https://shinobubot.xyz/" />
+    <link rel="alternate" hreflang="en" href="https://shinobubot.xyz/" />
+    <link rel="alternate" hreflang="tr" href="https://shinobubot.xyz/" />
+    <link rel="alternate" hreflang="de" href="https://shinobubot.xyz/" />
+    <link rel="alternate" hreflang="fr" href="https://shinobubot.xyz/" />
+    <link rel="alternate" hreflang="es" href="https://shinobubot.xyz/" />
+    <link rel="alternate" hreflang="ru" href="https://shinobubot.xyz/" />
+    <link rel="alternate" hreflang="ar" href="https://shinobubot.xyz/" />
+    <link rel="alternate" hreflang="ja" href="https://shinobubot.xyz/" />
+    <link rel="alternate" hreflang="ko" href="https://shinobubot.xyz/" />
+    <link rel="alternate" hreflang="pt" href="https://shinobubot.xyz/" />
+    <link rel="alternate" hreflang="bs" href="https://shinobubot.xyz/" />
+    <link rel="alternate" hreflang="x-default" href="https://shinobubot.xyz/" />
+
+    <!-- ═══════════════════════════════════════
+         OPEN GRAPH / FACEBOOK / DISCORD
+    ═══════════════════════════════════════ -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://shinobubot.xyz/" />
+    <meta property="og:title" content="Shinobu — The Best Discord Music Bot" />
+    <meta property="og:description" content="YouTube, Spotify, SoundCloud support. 8D audio, Bass Boost, Nightcore filters. Personal playlist management and a unique record label economy. Add for free!" />
+    <meta property="og:image" content="https://shinobubot.xyz/opengraph.jpg" />
+    <meta property="og:image:secure_url" content="https://shinobubot.xyz/opengraph.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:type" content="image/jpeg" />
+    <meta property="og:image:alt" content="Shinobu Discord Music Bot — YouTube, Spotify, SoundCloud support" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:locale:alternate" content="tr_TR" />
+    <meta property="og:locale:alternate" content="de_DE" />
+    <meta property="og:locale:alternate" content="fr_FR" />
+    <meta property="og:locale:alternate" content="es_ES" />
+    <meta property="og:locale:alternate" content="ru_RU" />
+    <meta property="og:locale:alternate" content="ar_SA" />
+    <meta property="og:locale:alternate" content="ja_JP" />
+    <meta property="og:locale:alternate" content="ko_KR" />
+    <meta property="og:locale:alternate" content="pt_BR" />
+    <meta property="og:site_name" content="Shinobu Bot" />
+    <meta property="og:updated_time" content="2026-03-28T00:00:00+00:00" />
+
+    <!-- ═══════════════════════════════════════
+         TWITTER CARD
+    ═══════════════════════════════════════ -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@ShinobuBot" />
+    <meta name="twitter:creator" content="@ShinobuBot" />
+    <meta name="twitter:title" content="Shinobu — Discord Music Bot" />
+    <meta name="twitter:description" content="Crystal-clear audio, advanced filters, playlist management and economy system. The best free music bot for your Discord server!" />
+    <meta name="twitter:image" content="https://shinobubot.xyz/opengraph.jpg" />
+    <meta name="twitter:image:alt" content="Shinobu Discord Music Bot" />
+
+    <!-- ═══════════════════════════════════════
+         THEME & APPEARANCE
+    ═══════════════════════════════════════ -->
+    <meta name="theme-color" content="#f59e0b" />
+    <meta name="msapplication-navbutton-color" content="#f59e0b" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-title" content="Shinobu Bot" />
+    <meta name="application-name" content="Shinobu Bot" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="msapplication-TileColor" content="#f59e0b" />
+    <meta name="msapplication-starturl" content="/" />
+
+    <!-- ═══════════════════════════════════════
+         FAVICON
+    ═══════════════════════════════════════ -->
+    <link rel="icon" type="image/webp" href="/shinobu-avatar.webp" />
+    <link rel="shortcut icon" type="image/webp" href="/shinobu-avatar.webp" />
+    <link rel="apple-touch-icon" href="/shinobu-avatar.webp" />
+
+    <!-- ═══════════════════════════════════════
+         PERFORMANCE / RESOURCE HINTS
+    ═══════════════════════════════════════ -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
+    <link rel="preload" as="image" href="/shinobu-avatar.webp" />
+    <link rel="preload" as="image" href="/opengraph.jpg" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+
+    <!-- ═══════════════════════════════════════
+         STRUCTURED DATA — Organization
+    ═══════════════════════════════════════ -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Shinobu Bot",
+      "alternateName": ["Shinobu Discord Bot", "Shinobu Müzik Botu", "Shinobu Music Bot", "シノブBot", "시노부봇"],
+      "url": "https://shinobubot.xyz/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://shinobubot.xyz/shinobu-avatar.webp",
+        "width": 512,
+        "height": 512
+      },
+      "image": "https://shinobubot.xyz/opengraph.jpg",
+      "description": "Advanced free music bot for Discord servers. Supports YouTube, Spotify, SoundCloud and Apple Music. Available in 11 languages.",
+      "sameAs": [
+        "https://discord.gg/shinobu",
+        "https://twitter.com/ShinobuBot"
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "customer support",
+        "url": "https://shinobubot.xyz/",
+        "availableLanguage": ["English", "Turkish", "German", "French", "Spanish", "Russian", "Arabic", "Japanese", "Korean", "Portuguese", "Bosnian"]
+      }
+    }
+    </script>
+
+    <!-- ═══════════════════════════════════════
+         STRUCTURED DATA — SoftwareApplication
+    ═══════════════════════════════════════ -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Shinobu",
+      "alternateName": [
+        "Shinobu Bot",
+        "Shinobu Discord Bot",
+        "Shinobu Music Bot",
+        "Shinobu Müzik Botu",
+        "Shinobu Musik Bot",
+        "Bot Musique Shinobu",
+        "Bot Música Shinobu",
+        "Шинобу Бот",
+        "シノブBot",
+        "시노부 봇"
+      ],
+      "url": "https://shinobubot.xyz/",
+      "logo": "https://shinobubot.xyz/shinobu-avatar.webp",
+      "image": "https://shinobubot.xyz/opengraph.jpg",
+      "description": "Shinobu is an advanced free music bot for Discord servers. Supports YouTube, Spotify, SoundCloud and Apple Music with 8D audio, Bass Boost, and Nightcore filters, personal playlist management, and a unique record label economy system. Available in 11 languages worldwide.",
+      "applicationCategory": "MusicApplication",
+      "applicationSubCategory": "Discord Bot",
+      "operatingSystem": "Discord",
+      "softwareVersion": "2.0",
+      "datePublished": "2024-01-01",
+      "dateModified": "2026-03-28",
+      "inLanguage": ["en", "tr", "ar", "de", "es", "fr", "ja", "ko", "pt", "ru", "bs"],
+      "isAccessibleForFree": true,
+      "installUrl": "https://shinobubot.xyz/",
+      "featureList": [
+        "YouTube music support",
+        "Spotify integration",
+        "SoundCloud support",
+        "Apple Music support",
+        "8D audio filter",
+        "Bass Boost filter",
+        "Nightcore mode",
+        "Karaoke mode",
+        "Personal playlist management",
+        "Queue saving",
+        "Record Label economy system",
+        "24/7 playback mode",
+        "11 language support",
+        "High quality audio",
+        "Pitch control",
+        "Speed control",
+        "Equalizer"
+      ],
+      "offers": [
+        {
+          "@type": "Offer",
+          "name": "Free Plan",
+          "price": "0",
+          "priceCurrency": "USD",
+          "description": "All core features for free",
+          "availability": "https://schema.org/InStock"
+        },
+        {
+          "@type": "Offer",
+          "name": "Premium",
+          "price": "49",
+          "priceCurrency": "TRY",
+          "description": "Karaoke mode, queue saving and all premium features",
+          "availability": "https://schema.org/InStock"
+        }
+      ],
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "bestRating": "5",
+        "worstRating": "1",
+        "reviewCount": "1247",
+        "ratingCount": "1247"
+      },
+      "author": {
+        "@type": "Organization",
+        "name": "Shinobu Bot Team",
+        "url": "https://shinobubot.xyz/"
+      }
+    }
+    </script>
+
+    <!-- ═══════════════════════════════════════
+         STRUCTURED DATA — WebSite
+    ═══════════════════════════════════════ -->
+    <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "WebSite",
-      "description": "Shinobu page",
-      "headline": "Shinobu Bot",
-      "name": "ShinobuBot.github.io",
-      "url": "https://Shinobubot.github.io/"
+      "name": "Shinobu Bot",
+      "url": "https://shinobubot.xyz/",
+      "description": "Official website of Shinobu Discord music bot. Explore YouTube, Spotify, SoundCloud support and premium features.",
+      "inLanguage": ["en", "tr", "de", "fr", "es", "ru", "ar", "ja", "ko", "pt", "bs"],
+      "dateModified": "2026-03-28",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "https://shinobubot.xyz/?q={search_term_string}"
+        },
+        "query-input": "required name=search_term_string"
+      }
     }
-  </script>
+    </script>
 
+    <!-- ═══════════════════════════════════════
+         STRUCTURED DATA — FAQPage (multilingual)
+    ═══════════════════════════════════════ -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is Shinobu Discord bot?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Shinobu is an advanced music bot for Discord servers. It can play music from YouTube, Spotify, SoundCloud and Apple Music, and apply filters like 8D audio, Bass Boost and Nightcore. Available in 11 languages."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is Shinobu bot free?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, Shinobu's core features are completely free. A premium plan is available for advanced features like Karaoke mode, queue saving and priority support."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What music platforms does Shinobu support?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Shinobu supports YouTube, Spotify, SoundCloud and Apple Music. You can add songs directly via URL or by searching."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I add a Discord music bot?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "To add Shinobu to your Discord server, simply click the 'Add to Discord' button on shinobubot.xyz. Your bot will be ready to play music within seconds."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What audio filters does Shinobu support?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Shinobu supports 8D audio, Bass Boost, Nightcore, Karaoke, Pitch control, Speed control, Equalizer and more audio filters."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the best Discord music bot?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Shinobu is one of the most feature-rich Discord music bots, with YouTube, Spotify, SoundCloud and Apple Music support, advanced audio filters, and a unique economy system. Core features are completely free."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is there a free music bot for Discord?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, Shinobu is a completely free music bot for Discord. You can play music from YouTube, Spotify and SoundCloud, and use filters like Bass Boost and 8D audio at no cost."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Shinobu Discord botu nedir?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Shinobu, Discord sunucuları için gelişmiş bir müzik botudur. YouTube, Spotify, SoundCloud ve Apple Music'ten müzik çalabilir, 8D ses, Bass Boost ve Nightcore gibi filtreler uygulayabilirsiniz. 11 dil desteği sunar."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Was ist der beste Discord Musik Bot?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Shinobu ist einer der besten Discord Musik Bots mit YouTube, Spotify, SoundCloud und Apple Music Unterstützung, erweiterten Audiofiltern und einem einzigartigen Wirtschaftssystem. Die Kernfunktionen sind völlig kostenlos."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Quel est le meilleur bot de musique Discord?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Shinobu est l'un des meilleurs bots de musique Discord avec le support YouTube, Spotify, SoundCloud et Apple Music, des filtres audio avancés et un système économique unique. Les fonctionnalités de base sont entièrement gratuites."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Cuál es el mejor bot de música para Discord?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Shinobu es uno de los mejores bots de música de Discord con soporte para YouTube, Spotify, SoundCloud y Apple Music, filtros de audio avanzados y un sistema económico único. Las funciones principales son completamente gratuitas."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "디스코드 최고의 음악 봇은 무엇인가요?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Shinobu는 YouTube, Spotify, SoundCloud, Apple Music 지원과 고급 오디오 필터 및 독특한 경제 시스템을 갖춘 최고의 디스코드 음악 봇 중 하나입니다. 핵심 기능은 완전히 무료입니다."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "ディスコードで最高の音楽ボットは何ですか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "ShinobuはYouTube、Spotify、SoundCloud、Apple Musicをサポートし、高度なオーディオフィルターとユニークな経済システムを備えた最高のDiscord音楽ボットの一つです。基本機能は完全無料です。"
+          }
+        }
+      ]
+    }
+    </script>
 
-  <!-- link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" -->
-  <!-- redirect to dashboard -->
-  <meta http-equiv="refresh" content="0;URL=http://5.161.182.209:1040/">
-  <script>
-    window.location.href = "http://5.161.182.209:1040/";
-  </script>
-</head>
+    <!-- ═══════════════════════════════════════
+         STRUCTURED DATA — BreadcrumbList
+    ═══════════════════════════════════════ -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://shinobubot.xyz/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Premium",
+          "item": "https://shinobubot.xyz/premium"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Commands",
+          "item": "https://shinobubot.xyz/commands/record-label"
+        }
+      ]
+    }
+    </script>
+    <script type="module" crossorigin src="/assets/index-xcB4qRX3.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-D5ssvYKp.css">
+  </head>
+  <body>
+    <div id="root"></div>
+    <!-- SEO: Multilingual core content for crawlers -->
+    <noscript>
+      <style>
+        .noscript-content { font-family: Arial, sans-serif; max-width: 900px; margin: 0 auto; padding: 40px 20px; color: #222; }
+        .noscript-content h1 { font-size: 2.2em; color: #f59e0b; }
+        .noscript-content h2 { font-size: 1.4em; margin-top: 30px; }
+        .noscript-content ul { line-height: 2; }
+        .noscript-content a { color: #f59e0b; text-decoration: none; font-weight: bold; }
+        .noscript-content .lang-section { border-top: 1px solid #eee; margin-top: 40px; padding-top: 20px; }
+      </style>
+      <div class="noscript-content">
+        <!-- English -->
+        <h1>Shinobu — The Best Discord Music Bot</h1>
+        <p>Shinobu is an advanced free music bot for your Discord server. Stream high quality music from YouTube, Spotify, SoundCloud and Apple Music.</p>
+        <p><a href="https://shinobubot.xyz/">Add to Discord for Free →</a></p>
+        <h2>Supported Platforms</h2>
+        <ul>
+          <li>YouTube — Millions of songs and videos</li>
+          <li>Spotify — Album and playlist support</li>
+          <li>SoundCloud — Independent artists</li>
+          <li>Apple Music — Premium music library</li>
+        </ul>
+        <h2>Audio Filters</h2>
+        <ul>
+          <li>8D Audio — 3D surround sound experience</li>
+          <li>Bass Boost — Powerful bass effect</li>
+          <li>Nightcore — High-speed anime-style audio</li>
+          <li>Karaoke mode — Vocal reduction</li>
+          <li>Pitch &amp; Speed control</li>
+          <li>Equalizer</li>
+        </ul>
+        <h2>Key Features</h2>
+        <ul>
+          <li>Personal playlist management</li>
+          <li>Queue saving and loading</li>
+          <li>Record Label economy system</li>
+          <li>24/7 uninterrupted playback</li>
+          <li>11 language support (English, Turkish, German, French, Spanish, Russian, Arabic, Japanese, Korean, Portuguese, Bosnian)</li>
+          <li>Crystal-clear audio quality</li>
+        </ul>
+
+        <!-- Türkçe -->
+        <div class="lang-section">
+          <h2>Türkçe — Discord Müzik Botu</h2>
+          <p>Shinobu, Discord sunucunuz için gelişmiş ücretsiz bir müzik botudur. YouTube, Spotify, SoundCloud ve Apple Music'ten yüksek kalitede müzik dinleyin.</p>
+          <ul>
+            <li>YouTube, Spotify, SoundCloud, Apple Music desteği</li>
+            <li>8D ses, Bass Boost, Nightcore, Karaoke filtreleri</li>
+            <li>Kişisel playlist yönetimi ve kuyruk kaydetme</li>
+            <li>Record Label ekonomi sistemi</li>
+            <li>7/24 kesintisiz çalma modu</li>
+            <li>11 dil desteği — Tamamen ücretsiz</li>
+          </ul>
+        </div>
+
+        <!-- Deutsch -->
+        <div class="lang-section">
+          <h2>Deutsch — Discord Musik Bot</h2>
+          <p>Shinobu ist der beste kostenlose Discord Musik Bot. Unterstützt YouTube, Spotify, SoundCloud und Apple Music mit 8D Audio, Bass Boost und Nightcore Filtern.</p>
+          <ul>
+            <li>YouTube, Spotify, SoundCloud, Apple Music Unterstützung</li>
+            <li>8D Audio, Bass Boost, Nightcore, Karaoke Filter</li>
+            <li>Persönliche Playlist-Verwaltung</li>
+            <li>Record Label Wirtschaftssystem</li>
+            <li>11 Sprachen unterstützt — Komplett kostenlos</li>
+          </ul>
+        </div>
+
+        <!-- Français -->
+        <div class="lang-section">
+          <h2>Français — Bot Musique Discord</h2>
+          <p>Shinobu est le meilleur bot de musique Discord gratuit. Supporte YouTube, Spotify, SoundCloud et Apple Music avec des filtres 8D, Bass Boost et Nightcore.</p>
+          <ul>
+            <li>Support YouTube, Spotify, SoundCloud, Apple Music</li>
+            <li>Filtres 8D Audio, Bass Boost, Nightcore, Karaoké</li>
+            <li>Gestion de playlists personnelles</li>
+            <li>Système économique Record Label</li>
+            <li>11 langues supportées — Entièrement gratuit</li>
+          </ul>
+        </div>
+
+        <!-- Español -->
+        <div class="lang-section">
+          <h2>Español — Bot de Música Discord</h2>
+          <p>Shinobu es el mejor bot de música de Discord gratuito. Compatible con YouTube, Spotify, SoundCloud y Apple Music con filtros 8D, Bass Boost y Nightcore.</p>
+          <ul>
+            <li>Soporte YouTube, Spotify, SoundCloud, Apple Music</li>
+            <li>Filtros 8D Audio, Bass Boost, Nightcore, Karaoke</li>
+            <li>Gestión de listas de reproducción personales</li>
+            <li>Sistema económico Record Label</li>
+            <li>11 idiomas — Completamente gratis</li>
+          </ul>
+        </div>
+
+        <!-- Русский -->
+        <div class="lang-section">
+          <h2>Русский — Музыкальный бот для Discord</h2>
+          <p>Shinobu — лучший бесплатный музыкальный бот для Discord. Поддерживает YouTube, Spotify, SoundCloud и Apple Music с фильтрами 8D, Bass Boost и Nightcore.</p>
+          <ul>
+            <li>Поддержка YouTube, Spotify, SoundCloud, Apple Music</li>
+            <li>Фильтры 8D Audio, Bass Boost, Nightcore, Karaoke</li>
+            <li>Управление личными плейлистами</li>
+            <li>11 языков — Полностью бесплатно</li>
+          </ul>
+        </div>
+
+        <!-- 한국어 -->
+        <div class="lang-section">
+          <h2>한국어 — 디스코드 음악 봇</h2>
+          <p>Shinobu는 최고의 무료 디스코드 음악 봇입니다. YouTube, Spotify, SoundCloud, Apple Music을 지원하며 8D 오디오, 베이스 부스트, 나이트코어 필터를 제공합니다.</p>
+          <ul>
+            <li>YouTube, Spotify, SoundCloud, Apple Music 지원</li>
+            <li>8D 오디오, 베이스 부스트, 나이트코어, 카라오케 필터</li>
+            <li>개인 플레이리스트 관리</li>
+            <li>11개 언어 지원 — 완전 무료</li>
+          </ul>
+        </div>
+
+        <!-- 日本語 -->
+        <div class="lang-section">
+          <h2>日本語 — Discord 音楽ボット</h2>
+          <p>ShinobuはDiscordの最高の無料音楽ボットです。YouTube、Spotify、SoundCloud、Apple Musicをサポートし、8Dオーディオ、ベースブースト、ナイトコアフィルターを提供します。</p>
+          <ul>
+            <li>YouTube、Spotify、SoundCloud、Apple Music対応</li>
+            <li>8Dオーディオ、ベースブースト、ナイトコア、カラオケフィルター</li>
+            <li>個人プレイリスト管理</li>
+            <li>11言語対応 — 完全無料</li>
+          </ul>
+        </div>
+
+        <!-- Português -->
+        <div class="lang-section">
+          <h2>Português — Bot de Música Discord</h2>
+          <p>Shinobu é o melhor bot de música Discord gratuito. Suporta YouTube, Spotify, SoundCloud e Apple Music com filtros 8D, Bass Boost e Nightcore.</p>
+          <ul>
+            <li>Suporte YouTube, Spotify, SoundCloud, Apple Music</li>
+            <li>Filtros 8D Audio, Bass Boost, Nightcore, Karaoke</li>
+            <li>Gerenciamento de playlist pessoal</li>
+            <li>11 idiomas suportados — Completamente gratuito</li>
+          </ul>
+        </div>
+
+        <!-- العربية -->
+        <div class="lang-section">
+          <h2>العربية — بوت موسيقى ديسكورد</h2>
+          <p>Shinobu هو أفضل بوت موسيقى ديسكورد مجاني. يدعم YouTube وSpotify وSoundCloud وApple Music مع فلاتر 8D وBass Boost وNightcore.</p>
+          <ul>
+            <li>دعم YouTube وSpotify وSoundCloud وApple Music</li>
+            <li>فلاتر 8D Audio وBass Boost وNightcore وKaraoke</li>
+            <li>إدارة قوائم التشغيل الشخصية</li>
+            <li>11 لغة مدعومة — مجاني تماماً</li>
+          </ul>
+        </div>
+
+        <p><a href="https://shinobubot.xyz/premium">View Premium Plans</a> | <a href="https://shinobubot.xyz/commands/record-label">All Commands</a></p>
+      </div>
+    </noscript>
+  </body>
+</html>
